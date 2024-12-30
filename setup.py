@@ -8,7 +8,14 @@ setup(
     install_requires=['XBlock'],
     entry_points={
         'xblock.v1': [
-            'google-meet = google_meet_xblock:GoogleMeetXBlock',
+            'google_meet_xblock = google_meet_xblock:GoogleMeetXBlock',
         ]
+    },
+    package_data={
+        'google_meet_xblock': [
+            'templates/*.html',
+            'static/css/*.css',
+            'static/js/*.js',
+        ],
     },
 )
